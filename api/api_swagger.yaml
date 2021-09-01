@@ -1,0 +1,2040 @@
+swagger: "2.0"
+info:
+  description: "1800flood api"
+  version: "1.0.0"
+  title: "1800flood api"
+host: "https://eepx1o9b0k.execute-api.ap-southeast-2.amazonaws.com"
+basePath: "/api"
+schemes:
+- "https"
+paths:
+  /jobs/stats:
+    get:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'create job'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /quotes:
+    post:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'create job'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /quotes/{id}/convert:
+    post:
+      produce:
+      - 'application/json'
+      parameters:
+      - name: id
+        type: string
+        required: true
+        in: path
+      responses:
+        200:
+          description: 'create job'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "convert quote to job"
+      description: "convert quote to job"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs:
+    get:
+      summary: "get list of jobs"
+      description: "get list of jobs"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of jobs"
+          schema:
+            $ref: "#/definitions/joblist"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'create job'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}:
+    get:
+      summary: "get detail of jobs"
+      description: "get detail of jobs"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "get job details"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/field:
+    put:
+      summary: "save job field"
+      description: "save job field"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save job field"
+      x-amazon-apigateway-integration:  
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save job field"
+      description: "save job field"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save job field"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/areas:
+    get:
+      summary: "get list of areas"
+      description: "get list of areas"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: "list of areas"
+        
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      produce:
+      - 'application/json'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: 'create techs'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/bills:
+    get:
+      summary: "get list of bills"
+      description: "get list of bill"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: "list of bill"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "get list of bills"
+      description: "get list of bills"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "get list of bills"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/areas/{areaid}:
+    put:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: areaid
+        in: path
+        required: true
+        description: tech id
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      summary: "delete area"
+      description: "delete area"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: areaid
+        in: path
+        required: true
+        description: tech id
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/billitems/{billitemid}:
+    put:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: billitemid
+        in: path
+        required: true
+        description: tech id
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/downloadinvoice:
+    post:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: billitemid
+        in: path
+        required: true
+        description: tech id
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/billschedule:
+    get:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      produce:
+      - 'application/json'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: 'create techs'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/billschedule/{billscheduleid}:
+    put:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: billscheduleid
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      produce:
+      - 'application/json'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: billscheduleid
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: 'create techs'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/technicians:
+    get:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      produce:
+      - 'application/json'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: 'create techs'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/technicians/{techid}:
+    put:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: techid
+        in: path
+        required: true
+        description: tech id
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      summary: "get list of techs"
+      description: "get list of techs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      - name: techid
+        in: path
+        required: true
+        description: tech id
+        type: string
+      responses:
+        200:
+          description: "list of techs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/uploadpdf:
+    post:
+      produce:
+      - 'application/json'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: 'register user'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /login:
+    post:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'login user'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /register:
+    post:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'register user'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /validatetoken:
+    post:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'register user'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /quotes/{id}/sendquote:
+    post:
+      produce:
+      - 'application/json'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The id of the job to retrieve
+        type: string
+      responses:
+        200:
+          description: 'register user'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /activateuser:
+    post:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'activate user'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /resetpassword:
+    post:
+      produce:
+      - 'application/json'
+      responses:
+        200:
+          description: 'reset password for user'
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /settings:
+    post:
+      summary: "get list of settings for admin"
+      description: "get list of settings for admin"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of settings"
+          schema:
+            $ref: "#/definitions/settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    get:
+      summary: "get list of settings for admin"
+      description: "get list of settings for admin"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of settings"
+          schema:
+            $ref: "#/definitions/settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /settings/{id}:
+    put:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /addresses:
+    get:
+      summary: "list of addresses"
+      description: "list of addresses"
+      produces:
+      - "application/json"
+      response:
+        200:
+          description: "list of addresses"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /addresses/{id}:
+    get:
+      summary: "single addresses"
+      description: "single addresses"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      response:
+        200:
+          description: "list of addresses"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    put:
+      summary: "single addresses"
+      description: "single addresses"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      response:
+        200:
+          description: "list of addresses"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /customers:
+    get:
+      summary: "list of customers"
+      description: "list of customers"
+      produces:
+      - "application/json"
+      response:
+        200:
+          description: "list of customers"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /customers/{id}/jobs:
+    get:
+      summary: "get jobs by customer"
+      description: "get jobs by customer"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /customers/{id}/jobs/{jobid}:
+    get:
+      summary: "get customer job ids"
+      description: "get list of jobs by customer"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      - name: jobid
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of jobs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/areas/{areaid}/images:
+    get:
+      summary: "get images"
+      description: "get images"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of jobs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      summary: "create images"
+      description: "create images"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of jobs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/images/{imageid}:
+    delete:
+      summary: "get customer job ids"
+      description: "get list of jobs by customer"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      - name: imageid
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of jobs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /users:
+    get:
+      summary: "get users"
+      description: "get users"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of user"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /users/{id}/activate:
+    post:
+      summary: "activate user"
+      description: "get list of jobs by customer"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of jobs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /customers:
+    post:
+      summary: "create customer"
+      description: "create customer"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "create customer"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    get:
+      summary: "get customers"
+      description: "get list of customers"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of jobs"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /channels:
+    post:
+      summary: "create channel"
+      description: "create channel"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "create channel"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    get:
+      summary: "get list of channels"
+      description: "get list of channels"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "get list"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "get list of channels"
+      description: "get list of channels"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "get list of channels"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /channels/{id}:
+    get:
+      summary: "get list messages"
+      description: "get list of messages"
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "list of messages"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /channels/{id}/messages:
+    post:
+      summary: "create message "
+      description: "create messages"
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "create messages"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/areas/{areaid}/psychometrics:
+    get:
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      - name: areaid
+        in: path
+        type: string
+        required: true
+      summary: "get list"
+      description: "get list"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "get list"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      - name: areaid
+        in: path
+        type: string
+        required: true
+      summary: "create item"
+      description: "create item"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "create item"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /jobs/{id}/areas/{areaid}/psychometrics/{psychometricid}:
+    put:
+      summary: "save settings"
+      description: "save settings"
+      parameters:
+      - name: id
+        type: string
+        in: path
+        required: true
+      - name: areaid
+        type: string
+        in: path
+        required: true
+      - name: psychometricid
+        type: string
+        in: path
+        required: true
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /users/{id}/channels:
+    post:
+      summary: "save settings"
+      description: "save settings"
+      parameters:
+      - name: id
+        type: string
+        in: path
+        required: true
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      summary: "save settings"
+      description: "save settings"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "save settings"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::567029094155:role/service-role/1800api"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:567029094155:function:flood1800/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+definitions:
+    address:
+      properties:
+        addressid:
+          type: "integer"
+        name:
+          type: "string"
+        address1:
+          type: "string"
+        address2:
+          type: "string"
+        suburb:
+          type: "string"
+        state:
+          type: "string"
+        postcode:
+          type: "string"
+    joblist:
+      properties:
+        jobid:
+          type: "integer"
+        jobnumber:
+          type: "integer"
+        issp:
+          type: "boolean"
+        address:
+          type: object
+          $ref: "#/definitions/address"
+        progress:
+          type: "integer"
+        category:
+          type: "string"
+        level:
+          type: "string"
+        jobstatus:
+          type: "string"
+        jobtype:
+          type: "string"
+    settings:
+      properties:
+        mailgun_api:
+          type: "string"
+        mailgun_template:
+          type: "string"
+        call_out_fees:
+          type: "string"
+        risk_assessment_report:
+          type: "string"
+        water_damage_scope_work:
+          type: "string"
+        thermographer_assessment:
+          type: "string"
+        projectmanagement_per_hour:
+          type: "string"
+        supervisor_per_hour:
+          type: "string"
+        technician_per_hour:
+          type: "string"
+        air_movers_per_day:
+          type: "string"
+        dehumidifer_per_day:
+          type: "string"
+        afd_per_day:
+          type: "string"
+        water_extraction_truckmount_per_liter:
+          type: "string"
+        microbial_treatment_per_sqm:
+          type: "string"
+        data_log_testing_per_day:
+          type: "string"

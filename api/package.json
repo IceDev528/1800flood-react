@@ -1,0 +1,45 @@
+{
+   "name": "1800floodapi",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "ts-node src/index.ts"
+   },
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "@types/moment": "^2.13.0",
+      "amazon-cognito-identity-js": "^3.2.5",
+      "aws-sdk": "^2.642.0",
+      "file-type": "^14.1.4",
+      "grunt-ts": "^6.0.0-beta.22",
+      "jsbn": "^1.1.0",
+      "jsonwebtoken": "^8.5.1",
+      "jwk-to-pem": "^2.0.3",
+      "mailgun-js": "^0.22.0",
+      "moment": "^2.24.0",
+      "mysql": "^2.14.1",
+      "node-fetch": "^2.6.0",
+      "reflect-metadata": "^0.1.10",
+      "request": "^2.88.2",
+      "sha1": "^1.1.1",
+      "sjcl": "^1.0.8",
+      "typeorm": "0.2.24"
+   },
+   "devDependencies": {
+      "@types/aws-sdk": "^2.7.0",
+      "@types/jsbn": "^1.2.29",
+      "@types/jsonwebtoken": "^8.3.8",
+      "@types/mysql": "^2.15.9",
+      "@types/node": "^8.0.29",
+      "@types/npm": "^2.0.31",
+      "@types/request": "^2.48.4",
+      "@types/sjcl": "^1.0.29",
+      "grunt": "^1.1.0",
+      "grunt-aws-lambda": "^0.13.0",
+      "ts-node": "3.3.0",
+      "typescript": "^3.3.3333"
+   }
+}

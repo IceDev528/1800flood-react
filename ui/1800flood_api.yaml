@@ -1,0 +1,728 @@
+---
+swagger: "2.0"
+info:
+  description: "1800flood api"
+  version: "1.0.0"
+  title: "1800flood api"
+host: "eepx1o9b0k.execute-api.ap-southeast-2.amazonaws.com"
+basePath: "/prod"
+schemes:
+- "https"
+paths:
+  /activateuser:
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /addresses:
+    get:
+      responses: {}
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /addresses/{id}:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses: {}
+    put:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses: {}
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /channels:
+    get:
+      responses:
+        200:
+          description: "200 response"
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /channels/{id}:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /channels/{id}/messages:
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /customers:
+    get:
+      responses:
+        200:
+          description: "200 response"
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /customers/{id}/jobs:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /customers/{id}/jobs/{jobid}:
+    get:
+      parameters:
+      - name: "jobid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs:
+    get:
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/joblist"
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/stats:
+    get:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/areas:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/areas/{areaid}:
+    put:
+      parameters:
+      - name: "areaid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    delete:
+      parameters:
+      - name: "areaid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/areas/{areaid}/images:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/areas/{areaid}/psychometrics:
+    get:
+      parameters:
+      - name: "areaid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    post:
+      parameters:
+      - name: "areaid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/areas/{areaid}/psychometrics/{psychometricid}:
+    put:
+      parameters:
+      - name: "areaid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "psychometricid"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/billitems/{billitemid}:
+    put:
+      parameters:
+      - name: "billitemid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/bills:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/billschedule:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/billschedule/{billscheduleid}:
+    put:
+      parameters:
+      - name: "billscheduleid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    delete:
+      parameters:
+      - name: "billscheduleid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/downloadinvoice:
+    post:
+      parameters:
+      - name: "billitemid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/field:
+    put:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/images/{imageid}:
+    delete:
+      parameters:
+      - name: "imageid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/technicians:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/technicians/{techid}:
+    put:
+      parameters:
+      - name: "techid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    delete:
+      parameters:
+      - name: "techid"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /jobs/{id}/uploadpdf:
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /login:
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /quotes:
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /quotes/{id}/convert:
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /quotes/{id}/sendquote:
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /register:
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /resetpassword:
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /settings:
+    get:
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/settings"
+    post:
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/settings"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /settings/{id}:
+    put:
+      responses:
+        200:
+          description: "200 response"
+    delete:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /uploadfile:
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /users:
+    get:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /users/{id}/activate:
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /users/{id}/channels:
+    post:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+  /validatetoken:
+    post:
+      responses:
+        200:
+          description: "200 response"
+    options:
+      responses:
+        200:
+          description: "200 response"
+definitions:
+  settings:
+    properties:
+      mailgun_api:
+        type: "string"
+      mailgun_template:
+        type: "string"
+      call_out_fees:
+        type: "string"
+      risk_assessment_report:
+        type: "string"
+      water_damage_scope_work:
+        type: "string"
+      thermographer_assessment:
+        type: "string"
+      projectmanagement_per_hour:
+        type: "string"
+      supervisor_per_hour:
+        type: "string"
+      technician_per_hour:
+        type: "string"
+      air_movers_per_day:
+        type: "string"
+      dehumidifer_per_day:
+        type: "string"
+      afd_per_day:
+        type: "string"
+      water_extraction_truckmount_per_liter:
+        type: "string"
+      microbial_treatment_per_sqm:
+        type: "string"
+      data_log_testing_per_day:
+        type: "string"
+  address:
+    properties:
+      addressid:
+        type: "integer"
+      name:
+        type: "string"
+      address1:
+        type: "string"
+      address2:
+        type: "string"
+      suburb:
+        type: "string"
+      state:
+        type: "string"
+      postcode:
+        type: "string"
+  joblist:
+    properties:
+      jobid:
+        type: "integer"
+      jobnumber:
+        type: "integer"
+      issp:
+        type: "boolean"
+      address:
+        $ref: "#/definitions/address"
+      progress:
+        type: "integer"
+      category:
+        type: "string"
+      level:
+        type: "string"
+      jobstatus:
+        type: "string"
+      jobtype:
+        type: "string"
